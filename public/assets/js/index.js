@@ -88,7 +88,7 @@ const handleNoteDelete = (e) => {
   if (activeNote.id === noteId) {
     activeNote = {};
   }
-
+  
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -129,6 +129,12 @@ const renderNoteList = async (notes) => {
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
+
+    liEl.addEventListener("click", function(e) {
+        let note = JSON.parse(liEl.getAttribute("data-note"));
+        noteTitle.value = note.title;
+        noteText.value = note.text;
+    });
 
     const spanEl = document.createElement('span');
     spanEl.classList.add('list-item-title');
