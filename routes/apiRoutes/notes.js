@@ -1,51 +1,49 @@
-const fs = require('fs');
-const path = require('path');
-const router = require('express').Router();
-let notesData = require('../../db/db.json');
-const { nanoid }= require('nanoid');
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Note Taker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
 
-router.post('/api/notes', (req, res)=>{
-    const id = nanoid();
-    const newNote = createNewNote(req.body, id, notesData);
-    res.json(newNote);
-});
-
-router.get('/api/notes', (req, res)=>{
-    res.json(notesData);
-});
-
-router.delete('/api/notes/:id', function (req, res) {
-    const result = filterById(req.params.id, notesData);
-    // console.log(req.params.id);
-    fs.writeFile(
-        path.join(__dirname, '../../db/db.json'),
-        JSON.stringify(result, null, 2),
-        (err) => {
-            if (err) throw err;
-            console.log('The file has been saved!');
-            notesData = result;
-            res.json(result);
-        });
-    console.log(result);
-});
-
-
-function filterById(id, notesArray) {
-    const result = notesArray.filter(note => note.id !== id);
-    return result;
-}
-
-function createNewNote(note, id, noteArray) {
-    note.id = id;
-    noteArray.push(note);
-    console.log(noteArray);
-    fs.writeFile(
-        path.join(__dirname, '../../db/db.json'),
-        JSON.stringify({ noteArray }.noteArray, null, 2), (err) => {
-            if (err) throw err;
-            console.log('The file has been saved!');
-        });
-    return note;
-}
-
-module.exports = router;
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Note Taker </a>
+      <div class="icons">
+        <i class="fas fa-save text-light save-note"></i>
+        <i class="fas fa-plus text-light new-note"></i>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4 list-container">
+          <div class="card">
+            <ul class="list-group"></ul>
+          </div>
+        </div>
+        <div class="col-8">
+          <input
+            class="note-title"
+            placeholder="Note Title"
+            maxlength="28"
+            type="text"
+          />
+          <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
