@@ -1,4 +1,4 @@
-onst fs = require('fs');
+const fs = require('fs');
 const express = require('express');
 var bodyParser = require('body-parser');
 const app = express();
