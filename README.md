@@ -29,3 +29,5 @@ https://dragon-dict.herokuapp.com/
 
 
 
+<img src="https://user-images.githubusercontent.com/391923078/91d8ebf0-66dc-4717-b7ac-57b1b025d4b1.png" alt="notetaker1" style="max-width:100%;">
+
