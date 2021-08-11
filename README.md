@@ -1,27 +1,33 @@
 # ExpressJSNoteTaker
 
-# Raghav Ramanan
 
-
-
-## Langguages/Technologies Used
+## Languages/Technologies Used:
 
 -HTML
 
 -CSS
 
--Javascript
+-JavaScript
 
 -Express.js
 
--Heroku app
+-Heroku
 
 
-## This is a simple Note Taker app
-
-Create a new note, write the tite, and then save it.
+## Project Description
+This app allows you to open a new notes as you want, and then save it.
 You can check all your notes on the let side of the screen. 
 
 
+### **_Link URL to GitHub Repository_**
 
- 
+https://github.com/PrinceAdelXX/ExpressJSNoteTaker
+
+#### **_Link URL of deployed app to Heroku_**
+
+https://dragon-dict.herokuapp.com/
+
+
+
+## For More Information
+View my work portfolio profile at https://github.com/Volchenok89

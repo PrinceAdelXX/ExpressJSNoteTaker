@@ -1,12 +1,12 @@
 [
     {
         "id": 2,
-        "title": "Raghav",
-        "text": "Test note Raghav"
+        "title": "Adeel",
+        "text": "Test note adeel"
     },
     {
-        "title": "High five",
-        "text": "High five Francesca!",
+        "title": "Hello",
+        "text": "Hello everyone",
         "id": 3
     }
 ]
