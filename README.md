@@ -29,5 +29,3 @@ https://dragon-dict.herokuapp.com/
 
 
 
-## For More Information
-View my work portfolio profile at https://github.com/Volchenok89
