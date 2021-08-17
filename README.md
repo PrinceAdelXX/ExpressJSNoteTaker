@@ -27,7 +27,7 @@ https://github.com/PrinceAdelXX/ExpressJSNoteTaker
 
 https://dragon-dict.herokuapp.com/
 
-##### Screenshot Link
+## Screenshot/Usage
 
 ![Dragon-Dict](https://user-images.githubusercontent.com/34521827/129727706-a71f7f09-e0b6-4e04-a022-09851f3c6916.png)
 
